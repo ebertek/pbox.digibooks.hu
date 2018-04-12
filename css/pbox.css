@@ -1,0 +1,7 @@
+table {
+  width: 300px;
+}
+
+tr td:first-child {
+  min-width: 80px;
+}
