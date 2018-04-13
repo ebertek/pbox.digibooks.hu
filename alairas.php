@@ -5,7 +5,19 @@
   $position = $_GET['position'];
   $t = $_GET['t'];
   $e = $_GET['e'];
-  $location = $_GET['location'];
+
+  $web = $_GET['web'];
+  if ($web == "") {
+    $web = $_GET['web_other'];
+  }
+  $fb = $_GET['fb'];
+  if ($fb == "") {
+    $fb = $_GET['fb_other'];
+  }  
+  $ig = $_GET['ig'];
+  if ($ig == "") {
+    $ig = $_GET['ig_other'];
+  }
 
   function telClean($phone) {
     $tel=preg_replace("/[^0-9]/", "", $phone);
@@ -50,11 +62,11 @@
         <p style="margin: 0px;">1112 Budapest, Hengermalom út 21/B.</p>
         <?php if ($t != '') { echo('<p style="margin: 0px;">Tel.: ' . $t . '</p>'); } ?>
         <p style="margin: 0px;">E-mail: <a href="mailto:<?php echo "$e"; ?>"><?php echo "$e"; ?></a></p>
-        <p style="margin: 0px;">Web: <a href="http://www.partybox.hu/">www.partybox.hu</a></p>
-        <p style="margin: 0px;"><a href="https://www.facebook.com/karszalagok/"><img id="fb" width="29" height="29" style="width: 29px; height: 29px; padding: 2px 2px 2px 2px; border: 0px;" src="http://pbox.digibooks.hu/FB-f-Logo__blue_29.png" alt="Facebook" /></a><a href="https://www.instagram.com/explore/locations/323832634/wristlandcom-security-wristbands-in-europe/"><img id="ig" width="29" height="29" style="width: 29px; height: 29px; padding: 2px 2px 2px 2px; border: 0px;" src="http://pbox.digibooks.hu/IG_Glyph_Fill.png" alt="Instagram" /></a></p>
+        <p style="margin: 0px;">Web: <a href="http://www.<?php echo "$web"; ?>/"><?php echo "$web"; ?></a></p>
+        <p style="margin: 0px;"><a href="https://www.facebook.com/<?php echo "$fb"; ?>/"><img id="fb" width="29" height="29" style="width: 29px; height: 29px; padding: 2px 2px 2px 2px; border: 0px;" src="http://pbox.digibooks.hu/FB-f-Logo__blue_29.png" alt="Facebook" /></a><a href="https://www.instagram.com/<?php echo "$ig"; ?>/"><img id="ig" width="29" height="29" style="width: 29px; height: 29px; padding: 2px 2px 2px 2px; border: 0px;" src="http://pbox.digibooks.hu/IG_Glyph_Fill.png" alt="Instagram" /></a></p>
       </div>
       <div>
-        <a href="http://www.partybox.hu/"><img id="promo" width="640" height="106" style="width: 640px; height: 106px; margin: 6px 0px 6px 0px; border: 0px;" src="http://pbox.digibooks.hu/promo.png" alt="PartyBox" /></a>
+        <a href="http://www.<?php echo "$web"; ?>/"><img id="promo" width="640" height="106" style="width: 640px; height: 106px; margin: 6px 0px 6px 0px; border: 0px;" src="http://pbox.digibooks.hu/promo.png" alt="PartyBox" /></a>
       </div>
       <div style="color: #669C35; font-size: 10px;">
         🌳 Mielőtt kinyomtatja ezt az üzenetet, kérjük, győződjön meg annak szükségességéről. A környezet védelme a MI kezünkben van. A PartyBox számára fontos a környezetvédelem! Tartson velünk Ön is!
