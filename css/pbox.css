@@ -1,7 +1,11 @@
 table {
-  width: 300px;
+  width: 500px;
 }
 
 tr td:first-child {
   min-width: 80px;
+}
+
+tr:nth-child(even) {
+    background-color: #eee;
 }
