@@ -15,12 +15,9 @@
     $fb = $_GET['fb_other'];
   }  
   $ig = $_GET['ig'];
-  if ($ig == "") {
-    $ig = $_GET['ig_other'];
-  }
 
   $promo = $_GET['promo'];
-  list($promo_w, $promo_h) = getimagesize('$promo');
+  list($promo_w, $promo_h) = getimagesize($promo);
 
   function telClean($phone) {
     $tel=preg_replace("/[^0-9]/", "", $phone);

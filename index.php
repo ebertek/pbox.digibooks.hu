@@ -77,15 +77,13 @@
             <tr>
               <td><label for="ig">Instagram: </label>
               </td>
-              <td>
-                <input type="radio" name="ig" value="partybox_karszalagok" checked="checked" /> partybox_karszalagok<br />
-                <input type="radio" name="ig" value=""  /> <input type="text" name="ig_other" />
+              <td><input type="text" name="ig" value="partybox_karszalagok" />
               </td>
             </tr>
             <tr>
               <td><label for="promo">Promo kép: </label>
               </td>
-              <td><input type="text" name="promo" value="http://pbox.digibooks.hu/promo.png" />
+              <td><input type="url" name="promo" value="http://pbox.digibooks.hu/promo.png" />
               </td>
             </tr>
           </table>
