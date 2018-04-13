@@ -82,6 +82,12 @@
                 <input type="radio" name="ig" value=""  /> <input type="text" name="ig_other" />
               </td>
             </tr>
+            <tr>
+              <td><label for="promo">Promo kép: </label>
+              </td>
+              <td><input type="text" name="promo" value="http://pbox.digibooks.hu/promo.png" />
+              </td>
+            </tr>
           </table>
           <input type="submit">
         </fieldset>

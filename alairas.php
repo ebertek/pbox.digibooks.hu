@@ -19,6 +19,9 @@
     $ig = $_GET['ig_other'];
   }
 
+  $promo = $_GET['promo'];
+  list($promo_w, $promo_h) = getimagesize('$promo');
+
   function telClean($phone) {
     $tel=preg_replace("/[^0-9]/", "", $phone);
     if (substr($tel, 0, 2) === '06') {
@@ -66,7 +69,7 @@
         <p style="margin: 0px;"><a href="https://www.facebook.com/<?php echo "$fb"; ?>/"><img id="fb" width="29" height="29" style="width: 29px; height: 29px; padding: 2px 2px 2px 2px; border: 0px;" src="http://pbox.digibooks.hu/FB-f-Logo__blue_29.png" alt="Facebook" /></a><a href="https://www.instagram.com/<?php echo "$ig"; ?>/"><img id="ig" width="29" height="29" style="width: 29px; height: 29px; padding: 2px 2px 2px 2px; border: 0px;" src="http://pbox.digibooks.hu/IG_Glyph_Fill.png" alt="Instagram" /></a></p>
       </div>
       <div>
-        <a href="http://www.<?php echo "$web"; ?>/"><img id="promo" width="640" height="106" style="width: 640px; height: 106px; margin: 6px 0px 6px 0px; border: 0px;" src="http://pbox.digibooks.hu/promo.png" alt="PartyBox" /></a>
+        <a href="http://www.<?php echo "$web"; ?>/"><img id="promo" width="<?php echo "$promo_w"; ?>" height="<?php echo "$promo_h"; ?>" style="width: <?php echo "$promo_w"; ?>px; height: <?php echo "$promo_h"; ?>px; margin: 6px 0px 6px 0px; border: 0px;" src="<?php echo "$promo"; ?>" alt="PartyBox" /></a>
       </div>
       <div style="color: #669C35; font-size: 10px;">
         🌳 Mielőtt kinyomtatja ezt az üzenetet, kérjük, győződjön meg annak szükségességéről. A környezet védelme a MI kezünkben van. A PartyBox számára fontos a környezetvédelem! Tartson velünk Ön is!
