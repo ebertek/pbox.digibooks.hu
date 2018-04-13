@@ -1,4 +1,4 @@
-table {
+table, form {
   width: 500px;
 }
 
@@ -7,5 +7,5 @@ tr td:first-child {
 }
 
 tr:nth-child(even) {
-    background-color: #eee;
+  background-color: #eee;
 }
