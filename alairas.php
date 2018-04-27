@@ -57,7 +57,7 @@
   $position = $_GET['position'];
   $t = $_GET['t'];
   $e = $_GET['e'];
-  $loc = $_GET['loc'];
+  $loc = "'" . $_GET['loc'] . "'";
 
   $web = $_GET['web'];
   if ($web == "default") {
