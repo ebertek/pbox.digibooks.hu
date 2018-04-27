@@ -18,6 +18,8 @@
     <link href="https://ebertek.com/" rel="home" />
     <link href="css/pbox.css" rel="stylesheet" type="text/css" />
     <link href="favicon.ico" rel="icon" type="image/x-icon" />
+
+    <script src="js/pbox.js" type="text/javascript" charset="utf-8"></script>
   </head>
 
   <body>
@@ -50,28 +52,30 @@
               </td>
             </tr>
             <tr>
+              <td><label for="loc">Ország: </label>
+              </td>
+              <td>
+                <input type="radio" name="loc" value="cz" /> Csehország (.cz)<br />
+                <input type="radio" name="loc" value="hu" checked="checked" /> Magyarország (.hu)<br />
+                <input type="radio" name="loc" value="ro" /> Románia (.ro)<br />
+                <input type="radio" name="loc" value="sk" /> Szlovákia (.sk)<br />
+                <input type="radio" name="loc" value="com" /> Nemzetközi (.com)<br />
+              </td>
+            </tr>
+            <tr>
               <td><label for="web">Web: </label>
               </td>
               <td>
-                <input type="radio" name="web" value="naramky24.cz" /> Naramky24.cz<br />
-                <input type="radio" name="web" value="naramky24.sk" /> Naramky24.sk<br />
-                <input type="radio" name="web" value="partybox.hu" checked="checked" /> Partybox.hu<br />
-                <input type="radio" name="web" value="partybox.ro" /> Partybox.ro<br />
-                <input type="radio" name="web" value="wristland.com" /> Wristland.com<br />
-                <input type="radio" name="web" value="wristland.hu" /> Wristland.hu<br />
-                <input type="radio" name="web" value=""  /> <input type="text" name="web_other" />
+                <input type="radio" name="web" value="default" checked="checked" /> Alapértelmezett<br />
+                <input type="radio" name="web" id="web" value="" /> <input type="text" name="web_other" oninput="other('web')" />
               </td>
             </tr>
             <tr>
               <td><label for="fb">Facebook: </label>
               </td>
               <td>
-                <input type="radio" name="fb" value="karszalagok" checked="checked" /> PartyBox - A karszalag birodalom<br />
-                <input type="radio" name="fb" value="WristlandBratariSnururi" /> Partybox - Bratari de identificare, Snururi textile<br />
-                <input type="radio" name="fb" value="Naramky24" /> Naramky24<br />
-                <input type="radio" name="fb" value="Naramky24cz-310409455743289" /> Naramky24cz<br />
-                <input type="radio" name="fb" value="wristland" /> Wristland.com - Security Wristbands in Europe<br />
-                <input type="radio" name="fb" value=""  /> <input type="text" name="fb_other" />
+                <input type="radio" name="fb" value="default" checked="checked" /> Alapértelmezett<br />
+                <input type="radio" name="fb" id="fb" value="" /> <input type="text" name="fb_other" oninput="other('fb')" />
               </td>
             </tr>
             <tr>
@@ -83,7 +87,9 @@
             <tr>
               <td><label for="promo">Promo kép: </label>
               </td>
-              <td><input type="url" name="promo" value="http://pbox.digibooks.hu/promo.png" />
+              <td>
+                <input type="radio" name="promo" value="default" checked="checked" /> Alapértelmezett<br />
+                <input type="radio" name="promo" id="promo" value="" /> <input type="url" name="promo_other" oninput="other('promo')" />
               </td>
             </tr>
           </table>
