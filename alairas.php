@@ -62,6 +62,7 @@
   $position = $_GET['position'];
   $t = $_GET['t'];
   $e = $_GET['e'];
+  $e2 = $_GET['e2'];
   $loc = "'" . $_GET['loc'] . "'";
 
   $web = $_GET['web'];
@@ -134,6 +135,7 @@
         <p style="margin: 0px;"><?php echo $adatok("[$loc]['cim']"); ?></p>
         <?php if ($t != '') { echo('<p style="margin: 0px;">Tel.: ' . $t . '</p>'); } ?>
         <p style="margin: 0px;">E-mail: <a href="mailto:<?php echo "$e"; ?>"><?php echo "$e"; ?></a></p>
+        <?php if ($e2 != '') { echo('<p style="margin: 0px;"><a href="mailto:' . $e2 . '">' . $e2 . '</a></p>'); } ?>
         <p style="margin: 0px;">Web: <a href="http://www.<?php echo "$web"; ?>/"><?php echo "$web"; ?></a></p>
         <p style="margin: 0px;"><a href="https://www.facebook.com/<?php echo "$fb"; ?>/"><img id="fb" width="29" height="29" style="width: 29px; height: 29px; padding: 2px 2px 2px 2px; border: 0px;" src="<?php echo "$baseURL"; ?>/FB-f-Logo__blue_29.png" alt="Facebook" /></a>
         <?php if ($ig != '') { echo('<a href="https://www.instagram.com/' . $ig . '/"><img id="ig" width="29" height="29" style="width: 29px; height: 29px; padding: 2px 2px 2px 2px; border: 0px;" src="' . $baseURL . '/IG_Glyph_Fill.png" alt="Instagram" /></a></p>'); } ?>

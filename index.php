@@ -40,15 +40,21 @@
               </td>
             </tr>
             <tr>
-              <td><label for="t">T: </label>
+              <td><label for="t">Telefon: </label>
               </td>
               <td><input type="tel" name="t" />
               </td>
             </tr>
             <tr>
-              <td><label for="e">E: </label>
+              <td><label for="e">E-mail: </label>
               </td>
               <td><input type="email" name="e" value="@partybox.hu" />
+              </td>
+            </tr>
+            <tr>
+              <td><label for="e2">E-mail 2: </label>
+              </td>
+              <td><input type="email" name="e2" value="" />
               </td>
             </tr>
             <tr>
