@@ -40,7 +40,7 @@
       'promo' => "ro.png",
       'ceg' => "Partybox",
       'slogan' => "",
-      'cim' => "George Enescu nr 6 AP4, Oradea 410034, Románia",
+      'cim' => "Piata Matei Corvin Nr. 5, Targu Mures, Romania",
       'print' => "Gândește-te la mediul înconjurător înainte de a printa acest e-mail. Protejarea mediului este în mâinile noastre! Partybox susține protecția mediului! Alătură-te și tu inițiativei noastre!"
     ),
     'com' => array(
