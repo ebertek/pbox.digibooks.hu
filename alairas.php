@@ -133,10 +133,12 @@
       <div>
         <p style="margin: 0px;"><span style="font-weight: 900;"><span style="font-size: 16px;"><?php echo $adatok("[$loc]['ceg']"); ?></span><?php echo $adatok("[$loc]['slogan']"); ?></span></p>
         <p style="margin: 0px;"><?php echo $adatok("[$loc]['cim']"); ?></p>
-        <?php if ($t != '') { echo('<p style="margin: 0px;">Tel.: ' . $t . '</p>'); } ?>
-        <p style="margin: 0px;">E-mail: <a href="mailto:<?php echo "$e"; ?>"><?php echo "$e"; ?></a></p>
-        <?php if ($e2 != '') { echo('<p style="margin: 0px;"><a href="mailto:' . $e2 . '">' . $e2 . '</a></p>'); } ?>
-        <p style="margin: 0px;">Web: <a href="http://www.<?php echo "$web"; ?>/"><?php echo "$web"; ?></a></p>
+        <table>
+          <?php if ($t != '') { echo('<tr><td>Tel.:</td><td>' . $t . '</td></tr>'); } ?>
+          <tr><td>E-mail:</td><td><a href="mailto:<?php echo "$e"; ?>"><?php echo "$e"; ?></a></td></tr>
+          <?php if ($e2 != '') { echo('<tr><td>&nbsp;</td><td><a href="mailto:' . $e2 . '">' . $e2 . '</a></td></tr>'); } ?>
+          <tr><td>Web:</td><td><a href="http://www.<?php echo "$web"; ?>/"><?php echo "$web"; ?></a></td></tr>
+        </table>
         <p style="margin: 0px;"><a href="https://www.facebook.com/<?php echo "$fb"; ?>/"><img id="fb" width="29" height="29" style="width: 29px; height: 29px; padding: 2px 2px 2px 2px; border: 0px;" src="<?php echo "$baseURL"; ?>/FB-f-Logo__blue_29.png" alt="Facebook" /></a>
         <?php if ($ig != '') { echo('<a href="https://www.instagram.com/' . $ig . '/"><img id="ig" width="29" height="29" style="width: 29px; height: 29px; padding: 2px 2px 2px 2px; border: 0px;" src="' . $baseURL . '/IG_Glyph_Fill.png" alt="Instagram" /></a>'); } ?></p>
       </div>
