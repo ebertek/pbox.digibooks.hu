@@ -1,7 +1,7 @@
 <?php
   header("Expires: Wed, 14 Mar 1990 05:00:00 GMT");
 
-  $baseURL = 'http://pbox.digibooks.hu';
+  $baseURL = 'http://mail.partybox.hu/alairas';
   $adatok = array(
     'cz' => array(
       'web' => "naramky24.cz",
