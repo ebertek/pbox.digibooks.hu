@@ -101,13 +101,13 @@
               </td>
             </tr>
             <tr>
-              <td><label for="baseURL">URL: </label>
+              <td><label for="baseurl">URL: </label>
               </td>
               <td>
-                <input type="radio" name="baseURL" value="default" checked="checked" /> Alapértelmezett<br />
-                <input type="radio" name="baseURL" value="http://mail.partybox.hu/alairas" /> http://mail.partybox.hu/alairas<br />
-                <input type="radio" name="baseURL" value="http://pbox.digibooks.hu" /> http://pbox.digibooks.hu<br />
-                <input type="radio" name="baseURL" id="baseURL" value="" /> <input type="url" name="baseURL_other" oninput="other('baseURL')" />
+                <input type="radio" name="baseurl" value="default" checked="checked" /> Alapértelmezett<br />
+                <input type="radio" name="baseurl" value="http://mail.partybox.hu/alairas" /> http://mail.partybox.hu/alairas<br />
+                <input type="radio" name="baseurl" value="http://pbox.digibooks.hu" /> http://pbox.digibooks.hu<br />
+                <input type="radio" name="baseurl" id="baseurl" value="" /> <input type="url" name="baseurl_other" oninput="other('baseurl')" />
               </td>
             </tr>
 

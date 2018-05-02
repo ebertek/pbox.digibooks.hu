@@ -83,18 +83,18 @@
     $ig = $_GET['ig_other'];
   }
 
-  $baseURL = $_GET['$baseURL'];
-  if ($baseURL == "default") {
-    $baseURL = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on'? "https://" : "http://";
-    $baseURL .= $_SERVER['SERVER_NAME'] . dirname($_SERVER['REQUEST_URI']);
-    $baseURL = rtrim($baseURL, '/\\');
-  } else if ($baseURL == "") {
-    $baseURL = $_GET['baseURL_other'];
+  $baseurl = $_GET['baseurl'];
+  if ($baseurl == "default") {
+    $baseurl = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on'? "https://" : "http://";
+    $baseurl .= $_SERVER['SERVER_NAME'] . dirname($_SERVER['REQUEST_URI']);
+    if (mb_substr($baseurl, -1) == "/") { $baseurl = rtrim($baseurl, '/\\'); }
+  } else if ($baseurl == "") {
+    $baseurl = $_GET['baseurl_other'];
   }
 
   $promo = $_GET['promo'];
   if ($promo == "default") {
-    $promo = $baseURL . '/promo/' . $adatok("[$loc]['promo']");
+    $promo = $baseurl . '/promo/' . $adatok("[$loc]['promo']");
   } else {
     $promo = $_GET['promo_other'];
   }
@@ -147,8 +147,8 @@
           <?php if ($e2 != '') { echo('<tr><td>&nbsp;</td><td><a href="mailto:' . $e2 . '">' . $e2 . '</a></td></tr>'); } ?>
           <tr><td>Web:</td><td><a href="http://www.<?php echo "$web"; ?>/"><?php echo "$web"; ?></a></td></tr>
         </table>
-        <p style="margin: 0px;"><a href="https://www.facebook.com/<?php echo "$fb"; ?>/"><img id="fb" width="29" height="29" style="width: 29px; height: 29px; padding: 2px 2px 2px 2px; border: 0px;" src="<?php echo "$baseURL"; ?>/FB-f-Logo__blue_29.png" alt="Facebook" /></a>
-        <?php if ($ig != '') { echo('<a href="https://www.instagram.com/' . $ig . '/"><img id="ig" width="29" height="29" style="width: 29px; height: 29px; padding: 2px 2px 2px 2px; border: 0px;" src="' . $baseURL . '/IG_Glyph_Fill.png" alt="Instagram" /></a>'); } ?></p>
+        <p style="margin: 0px;"><a href="https://www.facebook.com/<?php echo "$fb"; ?>/"><img id="fb" width="29" height="29" style="width: 29px; height: 29px; padding: 2px 2px 2px 2px; border: 0px;" src="<?php echo "$baseurl"; ?>/FB-f-Logo__blue_29.png" alt="Facebook" /></a>
+        <?php if ($ig != '') { echo('<a href="https://www.instagram.com/' . $ig . '/"><img id="ig" width="29" height="29" style="width: 29px; height: 29px; padding: 2px 2px 2px 2px; border: 0px;" src="' . $baseurl . '/IG_Glyph_Fill.png" alt="Instagram" /></a>'); } ?></p>
       </div>
       <div>
         <p style="margin: 0px;"><a href="http://www.<?php echo "$web"; ?>/"><img id="promo" width="<?php echo "$promo_w"; ?>" height="<?php echo "$promo_h"; ?>" style="width: <?php echo "$promo_w"; ?>px; height: <?php echo "$promo_h"; ?>px; margin: 6px 0px 6px 0px; border: 0px;" src="<?php echo "$promo"; ?>" alt="Partybox" /></a></p>
