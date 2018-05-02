@@ -6,6 +6,7 @@
     'cz' => array(
       'web' => "naramky24.cz",
       'fb' => "Naramky24cz-310409455743289",
+      'ig' => "",
       'promo' => "cz.png",
       'ceg' => "Total Wristbands s.r.o.",
       'slogan' => "",
@@ -15,6 +16,7 @@
     'sk' => array(
       'web' => "naramky24.sk",
       'fb' => "Naramky24",
+      'ig' => "",
       'promo' => "sk.png",
       'ceg' => "Total Wristbands s.r.o.",
       'slogan' => "",
@@ -24,6 +26,7 @@
     'hu' => array(
       'web' => "partybox.hu",
       'fb' => "karszalagok",
+      'ig' => "partybox_karszalagok",
       'promo' => "hu.png",
       'ceg' => "Partybox",
       'slogan' => " – a karszalag birodalom",
@@ -33,6 +36,7 @@
     'ro' => array(
       'web' => "partybox.ro",
       'fb' => "WristlandBratariSnururi",
+      'ig' => "",
       'promo' => "ro.png",
       'ceg' => "Partybox",
       'slogan' => "",
@@ -42,6 +46,7 @@
     'com' => array(
       'web' => "wristland.com",
       'fb' => "wristland",
+      'ig' => "",
       'promo' => "com.png",
       'ceg' => "Wristland",
       'slogan' => "",
@@ -72,6 +77,11 @@
     $fb = $_GET['fb_other'];
   }
   $ig = $_GET['ig'];
+  if ($ig == "default") {
+    $ig = $adatok("[$loc]['ig']");
+  } else {
+    $ig = $_GET['ig_other'];
+  }
 
   $promo = $_GET['promo'];
   if ($promo == "default") {
@@ -125,7 +135,8 @@
         <?php if ($t != '') { echo('<p style="margin: 0px;">Tel.: ' . $t . '</p>'); } ?>
         <p style="margin: 0px;">E-mail: <a href="mailto:<?php echo "$e"; ?>"><?php echo "$e"; ?></a></p>
         <p style="margin: 0px;">Web: <a href="http://www.<?php echo "$web"; ?>/"><?php echo "$web"; ?></a></p>
-        <p style="margin: 0px;"><a href="https://www.facebook.com/<?php echo "$fb"; ?>/"><img id="fb" width="29" height="29" style="width: 29px; height: 29px; padding: 2px 2px 2px 2px; border: 0px;" src="<?php echo "$baseURL"; ?>/FB-f-Logo__blue_29.png" alt="Facebook" /></a><a href="https://www.instagram.com/<?php echo "$ig"; ?>/"><img id="ig" width="29" height="29" style="width: 29px; height: 29px; padding: 2px 2px 2px 2px; border: 0px;" src="<?php echo "$baseURL"; ?>/IG_Glyph_Fill.png" alt="Instagram" /></a></p>
+        <p style="margin: 0px;"><a href="https://www.facebook.com/<?php echo "$fb"; ?>/"><img id="fb" width="29" height="29" style="width: 29px; height: 29px; padding: 2px 2px 2px 2px; border: 0px;" src="<?php echo "$baseURL"; ?>/FB-f-Logo__blue_29.png" alt="Facebook" /></a>
+        <?php if ($ig != '') { echo('<a href="https://www.instagram.com/' . $ig . '/"><img id="ig" width="29" height="29" style="width: 29px; height: 29px; padding: 2px 2px 2px 2px; border: 0px;" src="' . $baseURL . '/IG_Glyph_Fill.png" alt="Instagram" /></a></p>'); } ?>
       </div>
       <div>
         <a href="http://www.<?php echo "$web"; ?>/"><img id="promo" width="<?php echo "$promo_w"; ?>" height="<?php echo "$promo_h"; ?>" style="width: <?php echo "$promo_w"; ?>px; height: <?php echo "$promo_h"; ?>px; margin: 6px 0px 6px 0px; border: 0px;" src="<?php echo "$promo"; ?>" alt="Partybox" /></a>

@@ -81,7 +81,9 @@
             <tr>
               <td><label for="ig">Instagram: </label>
               </td>
-              <td><input type="text" name="ig" value="partybox_karszalagok" />
+              <td>
+                <input type="radio" name="ig" value="default" checked="checked" /> Alapértelmezett<br />
+                <input type="radio" name="ig" id="ig" value="" /> <input type="text" name="ig_other" oninput="other('ig')" />
               </td>
             </tr>
             <tr>
