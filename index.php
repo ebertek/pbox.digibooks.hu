@@ -100,6 +100,17 @@
                 <input type="radio" name="promo" id="promo" value="" /> <input type="url" name="promo_other" oninput="other('promo')" />
               </td>
             </tr>
+            <tr>
+              <td><label for="baseURL">URL: </label>
+              </td>
+              <td>
+                <input type="radio" name="baseURL" value="default" checked="checked" /> Alapértelmezett<br />
+                <input type="radio" name="baseURL" value="http://mail.partybox.hu/alairas" /> http://mail.partybox.hu/alairas<br />
+                <input type="radio" name="baseURL" value="http://pbox.digibooks.hu" /> http://pbox.digibooks.hu<br />
+                <input type="radio" name="baseURL" id="baseURL" value="" /> <input type="url" name="baseURL_other" oninput="other('baseURL')" />
+              </td>
+            </tr>
+
           </table>
           <input type="submit">
         </fieldset>

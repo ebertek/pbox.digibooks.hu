@@ -1,7 +1,6 @@
 <?php
   header("Expires: Wed, 14 Mar 1990 05:00:00 GMT");
 
-  $baseURL = 'http://mail.partybox.hu/alairas';
   $adatok = array(
     'cz' => array(
       'web' => "naramky24.cz",
@@ -82,6 +81,15 @@
     $ig = $adatok("[$loc]['ig']");
   } else {
     $ig = $_GET['ig_other'];
+  }
+
+  $baseURL = $_GET['$baseURL'];
+  if ($baseURL == "default") {
+    $baseURL = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on'? "https://" : "http://";
+    $baseURL .= $_SERVER['SERVER_NAME'] . dirname($_SERVER['REQUEST_URI']);
+    $baseURL = rtrim($baseURL, '/\\');
+  } else if ($baseURL == "") {
+    $baseURL = $_GET['baseURL_other'];
   }
 
   $promo = $_GET['promo'];
