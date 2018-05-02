@@ -138,10 +138,10 @@
         <?php if ($e2 != '') { echo('<p style="margin: 0px;"><a href="mailto:' . $e2 . '">' . $e2 . '</a></p>'); } ?>
         <p style="margin: 0px;">Web: <a href="http://www.<?php echo "$web"; ?>/"><?php echo "$web"; ?></a></p>
         <p style="margin: 0px;"><a href="https://www.facebook.com/<?php echo "$fb"; ?>/"><img id="fb" width="29" height="29" style="width: 29px; height: 29px; padding: 2px 2px 2px 2px; border: 0px;" src="<?php echo "$baseURL"; ?>/FB-f-Logo__blue_29.png" alt="Facebook" /></a>
-        <?php if ($ig != '') { echo('<a href="https://www.instagram.com/' . $ig . '/"><img id="ig" width="29" height="29" style="width: 29px; height: 29px; padding: 2px 2px 2px 2px; border: 0px;" src="' . $baseURL . '/IG_Glyph_Fill.png" alt="Instagram" /></a></p>'); } ?>
+        <?php if ($ig != '') { echo('<a href="https://www.instagram.com/' . $ig . '/"><img id="ig" width="29" height="29" style="width: 29px; height: 29px; padding: 2px 2px 2px 2px; border: 0px;" src="' . $baseURL . '/IG_Glyph_Fill.png" alt="Instagram" /></a>'); } ?></p>
       </div>
       <div>
-        <a href="http://www.<?php echo "$web"; ?>/"><img id="promo" width="<?php echo "$promo_w"; ?>" height="<?php echo "$promo_h"; ?>" style="width: <?php echo "$promo_w"; ?>px; height: <?php echo "$promo_h"; ?>px; margin: 6px 0px 6px 0px; border: 0px;" src="<?php echo "$promo"; ?>" alt="Partybox" /></a>
+        <p style="margin: 0px;"><a href="http://www.<?php echo "$web"; ?>/"><img id="promo" width="<?php echo "$promo_w"; ?>" height="<?php echo "$promo_h"; ?>" style="width: <?php echo "$promo_w"; ?>px; height: <?php echo "$promo_h"; ?>px; margin: 6px 0px 6px 0px; border: 0px;" src="<?php echo "$promo"; ?>" alt="Partybox" /></a></p>
       </div>
       <div style="color: #669C35; font-size: 10px; width: <?php echo "$promo_w"; ?>px;">
         🌳 <?php echo $adatok("[$loc]['print']"); ?>
