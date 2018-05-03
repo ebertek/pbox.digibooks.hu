@@ -9,7 +9,7 @@
       'promo' => "cz.png",
       'ceg' => "Total Wristbands s.r.o.",
       'slogan' => "",
-      'cim' => "Botanická 593/4  602 00 Brno",
+      'cim' => "Botanická 593/4, 602 00 Brno",
       'print' => "Před vytištěním tohoto e-mailu prosím zvažte ekologické důsledky a ochranu životního prostředí. Je pro nás velmi důležitá ochrana životního prostředí. Přidejte se i vy k nám!"
     ),
     'sk' => array(
@@ -19,7 +19,7 @@
       'promo' => "sk.png",
       'ceg' => "Total Wristbands s.r.o.",
       'slogan' => "",
-      'cim' => "Dúhová 844/75  943 42 Gbelce",
+      'cim' => "Dúhová 844/75, 943 42 Gbelce",
       'print' => "Pred vytlačením tohto e-mailu prosím zvážte ekologické dôsledky a ochranu životného prostredia. Je pre nás veľmi dôležitá ochrana životného prostredia. Pridajte sa i vy k nám ! "
     ),
     'hu' => array(
@@ -29,7 +29,7 @@
       'promo' => "hu.png",
       'ceg' => "Partybox",
       'slogan' => " – a karszalag birodalom",
-      'cim' => "1112 Budapest, Hengermalom út 21/B.",
+      'cim' => "1117 Budapest, Hengermalom út 20/1.",
       'print' => "Mielőtt kinyomtatja ezt az üzenetet, kérjük, győződjön meg annak szükségességéről. A környezet védelme a MI kezünkben van. A PartyBox számára fontos a környezetvédelem! Tartson velünk Ön is!"
     ),
     'ro' => array(
@@ -39,7 +39,7 @@
       'promo' => "ro.png",
       'ceg' => "Partybox",
       'slogan' => "",
-      'cim' => "Piata Matei Corvin Nr. 5, Targu Mures, Romania",
+      'cim' => "Piața Matei Corvin 5, Târgu Mureș",
       'print' => "Gândește-te la mediul înconjurător înainte de a printa acest e-mail. Protejarea mediului este în mâinile noastre! Partybox susține protecția mediului! Alătură-te și tu inițiativei noastre!"
     ),
     'com' => array(
@@ -54,7 +54,7 @@
     )
   );
   $adatok = function($str) use ($adatok) {
-    return eval('return $adatok'.$str.';');
+    return eval('return $adatok' . $str . ';');
   };
 
   $name = $_GET['name'];
@@ -151,7 +151,7 @@
         <?php if ($ig != '') { echo('<a href="https://www.instagram.com/' . $ig . '/"><img id="ig" width="29" height="29" style="width: 29px; height: 29px; padding: 2px 2px 2px 2px; border: 0px;" src="' . $baseurl . '/IG_Glyph_Fill.png" alt="Instagram" /></a>'); } ?></p>
       </div>
       <div>
-        <p style="margin: 0px;"><a href="http://www.<?php echo "$web"; ?>/"><img id="promo" width="<?php echo "$promo_w"; ?>" height="<?php echo "$promo_h"; ?>" style="width: <?php echo "$promo_w"; ?>px; height: <?php echo "$promo_h"; ?>px; margin: 6px 0px 6px 0px; border: 0px;" src="<?php echo "$promo"; ?>" alt="Partybox" /></a></p>
+        <p style="margin: 0px;"><a href="http://www.<?php echo "$web"; ?>/"><img id="promo" width="<?php echo "$promo_w"; ?>" height="<?php echo "$promo_h"; ?>" style="width: <?php echo "$promo_w"; ?>px; height: <?php echo "$promo_h"; ?>px; margin: 6px 0px 6px 0px; border: 0px;" src="<?php echo "$promo"; ?>" alt="<?php echo "$ceg"; ?>" /></a></p>
       </div>
       <div style="color: #669C35; font-size: 10px; width: <?php echo "$promo_w"; ?>px;">
         🌳 <?php echo $adatok("[$loc]['print']"); ?>
