@@ -127,21 +127,21 @@
 
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>PartyBox</title>
+    <title>PartyBox – <?php echo "$name"; ?></title>
   </head>
 
   <body style="font-size: 14px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased;">
 
     <div style="font-size: 14px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased;">
       <div>
-        <p style="margin: 0px;"><span style="font-weight: 900;"><?php echo "$name"; ?></span></p>
+        <p style="margin: 0px;"><span style="font-weight: 900; color: #E7390E"><?php echo "$name"; ?></span></p>
         <p style="margin: 0px;"><?php echo "$position"; ?></p>
         <p style="margin: 0px;">~~~~~~~~~~~~~~~</p>
       </div>
       <div>
         <p style="margin: 0px;"><span style="font-weight: 900;"><span style="font-size: 16px;"><?php echo $adatok("[$loc]['ceg']"); ?></span><?php echo $adatok("[$loc]['slogan']"); ?></span></p>
-        <p style="margin: 0px;"><?php echo $adatok("[$loc]['cim']"); ?></p>
         <table>
+          <tr><td colspan="2"><?php echo $adatok("[$loc]['cim']"); ?></td></tr>
           <?php if ($t != '') { echo('<tr><td>Tel.:</td><td>' . $t . '</td></tr>'); } ?>
           <tr><td>E-mail:</td><td><a href="mailto:<?php echo "$e"; ?>"><?php echo "$e"; ?></a></td></tr>
           <?php if ($e2 != '') { echo('<tr><td>&nbsp;</td><td><a href="mailto:' . $e2 . '">' . $e2 . '</a></td></tr>'); } ?>
