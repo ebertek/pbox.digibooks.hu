@@ -154,7 +154,7 @@
         <p style="margin: 0px;"><a href="http://www.<?php echo "$web"; ?>/"><img id="promo" width="<?php echo "$promo_w"; ?>" height="<?php echo "$promo_h"; ?>" style="width: <?php echo "$promo_w"; ?>px; height: <?php echo "$promo_h"; ?>px; margin: 6px 0px 6px 0px; border: 0px;" src="<?php echo "$promo"; ?>" alt="<?php echo "$ceg"; ?>" /></a></p>
       </div>
       <div style="color: #669C35; font-size: 10px; width: <?php echo "$promo_w"; ?>px;">
-        🌳 <?php echo $adatok("[$loc]['print']"); ?>
+        <p style="margin: 0px;">🌳 <?php echo $adatok("[$loc]['print']"); ?></p>
       </div>
     </div>
 
