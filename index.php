@@ -30,7 +30,7 @@
             <tr>
               <td><label for="name">Név: </label>
               </td>
-              <td><input type="text" name="name" />
+              <td><input type="text" name="name" required="required" />
               </td>
             </tr>
             <tr>
@@ -48,7 +48,7 @@
             <tr>
               <td><label for="e">E-mail: </label>
               </td>
-              <td><input type="email" name="e" value="@partybox.hu" />
+              <td><input type="email" name="e" required="required" value="@partybox.hu" />
               </td>
             </tr>
             <tr>
